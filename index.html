@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Nidhi ❤️</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    text-align:center;
+    color:white;
+    background:url('background.jpg') no-repeat center center/cover;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(rgba(255,105,180,0.5),rgba(128,0,128,0.6));
+    z-index:-1;
+}
+
+/* Glowing 3D Name */
+.name3d{
+    font-size:55px;
+    margin-top:40px;
+    font-weight:bold;
+    text-transform:uppercase;
+    text-shadow:
+        0 0 10px #fff,
+        0 0 20px #ff4da6,
+        0 0 40px #ff1a75,
+        0 0 80px #ff1a75;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{transform:scale(1);}
+    to{transform:scale(1.05);}
+}
+
+/* Friendship Message */
+.friend-msg{
+    font-size:20px;
+    max-width:700px;
+    margin:10px auto 20px;
+    line-height:1.6;
+}
+
+/* Typewriter */
+.typewriter{
+    font-size:22px;
+    margin-top:10px;
+    border-right:3px solid white;
+    display:inline-block;
+    white-space:nowrap;
+    overflow:hidden;
+}
+
+/* Gallery */
+.gallery{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    margin:40px 20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:200px;
+    height:260px;
+    perspective:1000px;
+}
+
+.card.center{
+    width:240px;
+    height:300px;
+}
+
+.card-inner{
+    width:100%;
+    height:100%;
+    position:relative;
+    transform-style:preserve-3d;
+    transition:transform 0.8s;
+}
+
+.card:hover .card-inner{
+    transform:rotateY(180deg);
+}
+
+.card-front,.card-back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    backface-visibility:hidden;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.card-front img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.card-back{
+    background:rgba(255,255,255,0.25);
+    backdrop-filter:blur(8px);
+    transform:rotateY(180deg);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:15px;
+    font-size:16px;
+}
+
+/* Buttons */
+button{
+    padding:12px 25px;
+    margin:10px;
+    border:none;
+    border-radius:25px;
+    font-size:16px;
+    cursor:pointer;
+    background:white;
+    color:#ff4b5c;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#ff4b5c;
+    color:white;
+}
+
+/* POPUP */
+.popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(5px);
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+
+.popup-box{
+    position:relative;
+    background:linear-gradient(135deg,#ff9a9e,#fbc2eb);
+    padding:30px;
+    width:90%;
+    max-width:450px;
+    border-radius:20px;
+    color:white;
+    transform:perspective(1000px) rotateX(15deg) scale(0.8);
+    animation:popupAnim 0.6s forwards;
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+@keyframes popupAnim{
+    to{
+        transform:perspective(1000px) rotateX(0deg) scale(1);
+    }
+}
+
+.close-btn{
+    position:absolute;
+    right:15px;
+    top:10px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+@media(max-width:768px){
+    .name3d{font-size:40px;}
+    .gallery{flex-direction:column;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="name3d">NIDHI ❤️</div>
+
+<div class="friend-msg">
+Some friendships are not just connections,
+they are blessings in disguise.
+And you are one of the most beautiful blessings in my life. ✨💖
+</div>
+
+<div class="typewriter" id="typeText"></div>
+
+<div class="gallery">
+
+<div class="card">
+<div class="card-inner">
+<div class="card-front">
+<img src="photo1.jpeg">
+</div>
+<div class="card-back">
+Your smile makes my world brighter 💕
+</div>
+</div>
+</div>
+
+<div class="card center">
+<div class="card-inner">
+<div class="card-front">
+<img src="photo2.jpeg">
+</div>
+<div class="card-back">
+You are the most beautiful part of my memories ✨
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-inner">
+<div class="card-front">
+<img src="photo3.jpeg">
+</div>
+<div class="card-back">
+No matter what happens, I’ll always value you 💞
+</div>
+</div>
+</div>
+
+</div>
+
+<button onclick="showPromise()">Click My Promise 💌</button>
+
+<div class="popup" id="promisePopup">
+  <div class="popup-box">
+    <span class="close-btn" onclick="closePromise()">❌</span>
+    <h2>My Promise To You 💖</h2>
+    <p>
+      Nidhi, I promise that I will always respect you,
+      care for you sincerely, support your dreams,
+      and stand beside you whenever you need someone.
+      No matter where life takes us,
+      your importance in my life will never fade. ❤️
+    </p>
+  </div>
+</div>
+
+<audio id="bgMusic" loop>
+<source src="music.mp3" type="audio/mp3">
+</audio>
+
+<script>
+const text="Dear Nidhi...";
+let i=0;
+function typing(){
+    if(i<text.length){
+        document.getElementById("typeText").innerHTML+=text.charAt(i);
+        i++;
+        setTimeout(typing,100);
+    }
+}
+typing();
+
+window.onload = function(){
+    const music = document.getElementById("bgMusic");
+    music.play().catch(()=>{});
+}
+
+function showPromise(){
+    document.getElementById("promisePopup").style.display="flex";
+    document.getElementById("bgMusic").play();
+}
+
+function closePromise(){
+    document.getElementById("promisePopup").style.display="none";
+}
+</script>
+
+</body>
+</html>
